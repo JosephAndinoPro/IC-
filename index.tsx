@@ -1,10 +1,10 @@
 // @ts-nocheck
-const { useState, useEffect } = React;
+const { useState, useEffect, useRef } = React;
 
 const productData = [
   {
     id: 'mp301',
-    image: 'images/17.jpg', // Updated to numeric filename
+    image: 'images/17.jpg',
     name: 'Ricoh MP 301',
     priceUSD: 490,
     type: 'B/N',
@@ -16,7 +16,7 @@ const productData = [
   },
   {
     id: 'im350',
-    image: 'images/10.jpg', // Updated to numeric filename
+    image: 'images/10.jpg',
     name: 'Ricoh IM 350', 
     priceUSD: 650,
     type: 'B/N',
@@ -28,7 +28,7 @@ const productData = [
   },
   {
     id: 'mp2555',
-    image: 'images/8.jpg', // Updated to numeric filename
+    image: 'images/8.jpg',
     name: 'Ricoh MP 2555',
     priceUSD: 1380,
     type: 'B/N',
@@ -40,7 +40,7 @@ const productData = [
   },
   {
     id: 'mp3055',
-    image: 'images/11.jpg', // Updated to numeric filename
+    image: 'images/11.jpg',
     name: 'Ricoh MP 3055',
     priceUSD: 1590,
     type: 'B/N',
@@ -52,7 +52,7 @@ const productData = [
   },
   {
     id: 'mp4055',
-    image: 'images/9.jpg', // Updated to numeric filename
+    image: 'images/9.jpg',
     name: 'Ricoh MP 4055',
     priceUSD: 1690,
     type: 'B/N',
@@ -64,7 +64,7 @@ const productData = [
   },
   {
     id: 'mp5055',
-    image: 'images/13.jpg', // Updated to numeric filename
+    image: 'images/13.jpg',
     name: 'Ricoh MP 5055',
     priceUSD: 1810,
     type: 'B/N',
@@ -76,7 +76,7 @@ const productData = [
   },
   {
     id: 'mp6055',
-    image: 'images/14.jpg', // Updated to numeric filename
+    image: 'images/14.jpg',
     name: 'Ricoh MP 6055',
     priceUSD: 1895,
     type: 'B/N',
@@ -88,7 +88,7 @@ const productData = [
   },
   {
     id: 'mp7503',
-    image: 'images/16.jpg', // Updated to numeric filename
+    image: 'images/16.jpg',
     name: 'Ricoh MP 7503',
     priceUSD: 3890,
     type: 'B/N',
@@ -100,7 +100,7 @@ const productData = [
   },
   {
     id: 'mpc4504',
-    image: 'images/4.jpg', // Updated to numeric filename
+    image: 'images/4.jpg',
     name: 'Ricoh MP C4504',
     priceUSD: 1680,
     type: 'Color',
@@ -112,7 +112,7 @@ const productData = [
   },
   {
     id: 'mpc5503',
-    image: 'images/2.jpg', // Updated to numeric filename
+    image: 'images/2.jpg',
     name: 'Ricoh MPC 5503',
     priceUSD: 1190,
     type: 'Color',
@@ -124,7 +124,7 @@ const productData = [
   },
   {
     id: 'mpc6004',
-    image: 'images/6.jpg', // Updated to numeric filename
+    image: 'images/6.jpg',
     name: 'Ricoh MP C6004',
     priceUSD: 1990,
     type: 'Color',
@@ -139,7 +139,7 @@ const productData = [
 const CoverSlide = () => (
     <div className="slide-content cover-slide">
         <div className="main-logo">
-            <img src="images/logo ic.jpg" alt="International Copiers Logo" /> {/* Updated logo filename */}
+            <img src="images/logo ic.jpg" alt="International Copiers Logo" />
         </div>
         <h1>Catálogo de Copiadoras Ricoh</h1>
         <h2>Calidad y eficiencia para tu negocio</h2>
@@ -251,7 +251,6 @@ const App = () => {
         return a.name.localeCompare(b.name);
     });
 
-
     const slides = [
         <CoverSlide key="cover" />,
         <CompanyIntroSlide key="intro" />,
@@ -261,7 +260,7 @@ const App = () => {
     ];
 
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-    const slideContainerRef = React.useRef(null);
+    const slideContainerRef = useRef(null);
 
     const nextSlide = () => {
         setCurrentSlideIndex(prev => Math.min(prev + 1, slides.length - 1));
@@ -281,12 +280,16 @@ const App = () => {
         <>
             {currentSlideIndex > 0 && (
                 <div className="logo">
-                    <img src="images/logo ic.jpg" alt="International Copiers Logo" /> {/* Updated logo filename */}
+                    <img src="images/logo ic.jpg" alt="International Copiers Logo" />
                 </div>
             )}
             <div className="slide-container" ref={slideContainerRef}>
                 {slides[currentSlideIndex]}
             </div>
+
+            {/* --- MODIFICATION START --- */}
+            {/* The navigation controls and slide indicator are now grouped together. */}
+            {/* On mobile, this container will become a fixed bar at the bottom. */}
             <div className="navigation-controls">
                 <button 
                     onClick={prevSlide} 
@@ -296,6 +299,12 @@ const App = () => {
                 >
                     Anterior
                 </button>
+
+                {/* The slide indicator is now placed between the buttons */}
+                <div className="slide-indicator">
+                    {currentSlideIndex + 1} / {slides.length}
+                </div>
+                
                 <button 
                     onClick={nextSlide} 
                     disabled={currentSlideIndex === slides.length - 1}
@@ -305,9 +314,7 @@ const App = () => {
                     Siguiente
                 </button>
             </div>
-            <div className="slide-indicator">
-                {currentSlideIndex + 1} / {slides.length}
-            </div>
+            {/* --- MODIFICATION END --- */}
         </>
     );
 };
