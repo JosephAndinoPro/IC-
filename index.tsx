@@ -153,7 +153,7 @@ const CompanyIntroSlide = () => (
         
         <h2>Nuestros Servicios</h2>
         <ul>
-            <li>Venta de equipos Ricoh multifuncionales (todos nuestros equipos son nuevos).</li>
+            <li>Venta de equipos Ricoh multifuncionales (todos nuestros equipos son Remanufacturados).</li>
             <li>Asesoría personalizada para elegir el equipo que mejor se adapte a sus necesidades.</li>
             <li>Soporte técnico y mantenimiento.</li>
             <li>Venta de consumibles y repuestos originales.</li>
@@ -238,7 +238,7 @@ const WarrantySlide = () => (
     <div className="slide-content content-slide warranty-slide">
          <h1>Nuestra Garantía</h1>
         <p className="icon">🛡️</p>
-        <p><strong>Para Equipos Adquiridos (Venta):</strong> Todos nuestros equipos nuevos cuentan con una garantía de <strong>6 meses o 10,000 copias</strong> (lo que se cumpla primero), brindándole total tranquilidad con su inversión.</p>
+        <p><strong>Para Equipos Adquiridos (Venta):</strong> Todos nuestros equipos cuentan con una garantía de <strong>6 meses o 10,000 copias</strong> (lo que se cumpla primero), brindándole total tranquilidad con su inversión.</p>
         <p><strong>Para Servicio de Alquiler:</strong> La garantía integral, el mantenimiento preventivo y correctivo, así como los suministros, están completamente cubiertos durante toda la vigencia de su contrato de alquiler. Despreocúpese de los detalles técnicos, nosotros nos encargamos.</p>
         <p style={{fontSize: "1.1em", marginTop: "30px", fontWeight: "bold"}}>¡Su inversión y operatividad están protegidas con International Copiers!</p>
     </div>
