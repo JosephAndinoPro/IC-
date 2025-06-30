@@ -11,7 +11,7 @@ const productData = [
     speedPPM: 30,
     functions: ['Impresión', 'Escaneo', 'Copia'],
     paperSize: ['A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Compacto y eficiente', 'Ideal para pequeñas oficinas', 'Tóner económico']
   },
   {
@@ -23,7 +23,7 @@ const productData = [
     speedPPM: 35,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax (opcional)'],
     paperSize: ['A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Pantalla táctil intuitiva', 'Conectividad avanzada', 'Bajo consumo energético']
   },
   {
@@ -35,7 +35,7 @@ const productData = [
     speedPPM: 25,
     functions: ['Impresión', 'Escaneo', 'Copia'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Alimentador de documentos rápido', 'Funciones de seguridad mejoradas', 'Operación silenciosa']
   },
   {
@@ -47,7 +47,7 @@ const productData = [
     speedPPM: 30,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Pantalla táctil a color personalizable', 'Integración con la nube', 'Alta durabilidad']
   },
   {
@@ -59,7 +59,7 @@ const productData = [
     speedPPM: 40,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Alta velocidad para grupos de trabajo', 'Opciones de finalizado avanzadas', 'Eficiencia energética superior']
   },
   {
@@ -71,7 +71,7 @@ const productData = [
     speedPPM: 50,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Rendimiento robusto para alto volumen', 'Calidad de impresión profesional', 'Fácil administración remota']
   },
   {
@@ -83,7 +83,7 @@ const productData = [
     speedPPM: 60,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax (opcional)'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Máxima productividad para grandes departamentos', 'Tecnología de imagen avanzada', 'Bajo costo por página']
   },
   {
@@ -95,7 +95,7 @@ const productData = [
     speedPPM: 75,
     functions: ['Impresión', 'Escaneo', 'Copia'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Velocidad extrema para entornos de producción ligera', 'Capacidad de papel expandible', 'Durabilidad industrial']
   },
   {
@@ -107,7 +107,7 @@ const productData = [
     speedPPM: 45,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Colores vibrantes y precisos', 'Pantalla táctil grande e intuitiva (Smart Operation Panel)', 'Conectividad LAN y móvil']
   },
   {
@@ -119,7 +119,7 @@ const productData = [
     speedPPM: 55, 
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax (opcional)'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo', 
+    status: 'Remanufacturado', 
     benefits: ['Calidad de color superior', 'Panel táctil intuitivo', 'Eficiencia energética']
   },
   {
@@ -131,7 +131,7 @@ const productData = [
     speedPPM: 60,
     functions: ['Impresión', 'Escaneo', 'Copia', 'Fax'],
     paperSize: ['A3', 'A4'],
-    status: 'Nuevo',
+    status: 'Remanufacturado',
     benefits: ['Alta velocidad de impresión a color', 'Calidad profesional para materiales de marketing', 'Ahorro energético modo suspensión']
   }
 ];
